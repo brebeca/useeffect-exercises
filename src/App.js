@@ -7,7 +7,7 @@ import Example2 from "./exemple/Exemplul2";
 function App() {
   return (
     <div className="App">
-      <Example0 />
+      <Example1 />
     </div>
   );
 }
