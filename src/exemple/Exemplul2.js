@@ -6,18 +6,21 @@ import { useState, useEffect } from "react";
 
 function Example2() {
   const [quotes, setQuotes] = useState([]);
+  const [loadQuotes, setLoadQuotes] = useState(false);
 
   useEffect(() => {
-    fetch("https://type.fit/api/quotes")
-      .then((response) => response.json())
-      .then((response2) => console.log(response2));
-  }, []);
+    if (loadQuotes) {
+      fetch("https://type.fit/api/quotes")
+        .then((response) => response.json())
+        .then((response2) => setQuotes(response2));
+    }
+  }, [loadQuotes]);
 
   return (
     <main>
       <h1>Exemplul 2</h1>
 
-      <button>Load Quotes</button>
+      <button onClick={() => setLoadQuotes(true)}>Load Quotes</button>
 
       {quotes.map((quote) => (
         <section>
