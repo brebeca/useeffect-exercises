@@ -9,6 +9,9 @@ function Example2() {
   return (
     <main>
       <h1>Exemplul 2</h1>
+
+      <button>Load Quotes</button>
+
       {quotes.map((quote) => (
         <section>
           <h3>
