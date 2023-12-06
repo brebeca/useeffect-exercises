@@ -2,9 +2,16 @@ import "./style.css";
 import { useState, useEffect } from "react";
 
 // "https://type.fit/api/quotes"
+// GET POST PUT DELETE
 
 function Example2() {
   const [quotes, setQuotes] = useState([]);
+
+  useEffect(() => {
+    fetch("https://type.fit/api/quotes")
+      .then((response) => response.json())
+      .then((response2) => console.log(response2));
+  }, []);
 
   return (
     <main>
