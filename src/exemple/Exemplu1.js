@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./style.css";
 
 // O componenta se rerandeaza (se reexecuta codul din componenta) de cate ori i se schimba state-ul (ex: useState) sau props-urile
 // useEffect: "efect secundar" in functie de array-ul de dependente
@@ -16,7 +17,7 @@ function Example1() {
     <div>
       <h1>Exemplul 1</h1>
       <button onClick={() => setCount(count + 1)}>
-        Buton apasat de {count} ori
+        Buton apasat de <strong>{count}</strong> ori
       </button>
     </div>
   );

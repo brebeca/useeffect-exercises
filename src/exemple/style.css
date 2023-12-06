@@ -21,3 +21,11 @@ section {
 h1 {
   font-size: 2rem;
 }
+
+button {
+  background: rgb(211, 216, 253);
+  padding: 10px;
+  border: 2px solid rgb(184, 146, 10);
+  border-radius: 5px;
+  font-size: 20px;
+}
