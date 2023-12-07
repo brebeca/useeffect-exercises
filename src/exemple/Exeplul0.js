@@ -6,8 +6,6 @@ function Example0() {
   const [count, setCount] = useState(0); // STATE: count
   const [count2, setCount2] = useState(0); // STATE: count
 
-  console.log("m am randat");
-
   //   useEffect(() => {
   //     console.log("useEffect"); =>  ruleaza la firecare randare
   //   });
@@ -17,22 +15,23 @@ function Example0() {
   //   }, []);
 
   // va rula ori de cate ori de schimba count
-  useEffect(() => {
-    console.log("useEffect  count1 = ", count);
-  }, [count]);
+  //   useEffect(() => {
+  //     console.log("useEffect  count1 = ", count);
+  //   }, [count]);
 
-  // va rula ori de cate ori de schimba count2
-  useEffect(() => {
-    console.log("useEffect  count2 = ", count2);
-  }, [count2]);
+  //   // va rula ori de cate ori de schimba count2
+  //   useEffect(() => {
+  //     console.log("useEffect  count2 = ", count2);
+  //   }, [count2]);
 
-  // va rula ori de cate ori de schimba count SAU count2
-  useEffect(() => {
-    console.log(count, count2);
-  }, [count, count2]);
+  //   // va rula ori de cate ori de schimba count SAU count2
+  //   useEffect(() => {
+  //     console.log(count, count2);
+  //   }, [count, count2]);
 
   return (
     <div>
+      {console.log("in return")}
       <h1>Exemplul 0</h1>
       <button onClick={() => setCount(count + 1)}>
         Buton apasat de <strong>{count}</strong> ori
