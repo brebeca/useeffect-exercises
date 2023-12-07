@@ -1,21 +1,11 @@
 import "./style.css";
-import { useState, useEffect } from "react";
+import useExemplu2hook from "./hooks/useExemplu2hook";
 
 // "https://type.fit/api/quotes"
 // GET POST PUT DELETE
 
 function Example2() {
-  const [quotes, setQuotes] = useState([]);
-  const [loadQuotes, setLoadQuotes] = useState(false);
-
-  useEffect(() => {
-    if (loadQuotes) {
-      fetch("https://type.fit/api/quotes")
-        .then((response) => response.json())
-        .then((response2) => setQuotes(response2));
-    }
-  }, [loadQuotes]);
-
+  const { quotes, setLoadQuotes } = useExemplu2hook();
   return (
     <main>
       <h1>Exemplul 2</h1>
